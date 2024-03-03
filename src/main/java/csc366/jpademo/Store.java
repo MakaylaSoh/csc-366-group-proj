@@ -101,15 +101,7 @@ public class Store {
     public String toString()
     {
 	    StringJoiner sj = new StringJoiner("," , Address.class.getSimpleName() + "[" , "]");
-	    sj.add(id.toString()).add(street).add(city).add(state).add(zipCode);
+	    sj.add(id.toString()).add(country).add(state).add(city).add(street).add(zipcode);
 	    return sj.toString();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-	    if (this == o) return true;
-	    if (!(o instanceof Address)) return false;
-	    return id != null && id.equals(((Address) o).getId());
-    }
-    
+    }    
 }
