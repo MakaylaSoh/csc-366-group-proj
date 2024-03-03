@@ -3,17 +3,16 @@ package csc366.jpademo;
 import java.util.StringJoiner;
 
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
 
 import javax.validation.constraints.NotNull;
 
 @Entity  // indicates that this class maps to a database table
 @Table(
-        name = "supplierProduct",     // may be omitted for default table naming
+        name = "product",     // may be omitted for default table naming
         uniqueConstraints = @UniqueConstraint(columnNames={"id"}) // requires @Column(name=...)
 )
-public class SupplierProduct {
+public class Product {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
@@ -26,9 +25,7 @@ public class SupplierProduct {
     @Column(name="cost")
     private Float cost;
 
-    public SupplierProduct() { }
-
-    public SupplierProduct(Float cost) {
+    public Product(Float cost) {
         this.cost = cost;
     }
 

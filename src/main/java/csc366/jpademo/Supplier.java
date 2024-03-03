@@ -18,7 +18,7 @@ public class Supplier {
 
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
-    private SupplierProduct supplier_product_id;
+    private Product product_id;
 
     public Supplier() { }
 
@@ -29,13 +29,13 @@ public class Supplier {
         this.id = id;
     }
 
-    public SupplierProduct getSupplier_product_id() {return supplier_product_id; }
+    public Product getSupplier_product_id() {return product_id; }
 
-    public void setSupplier_product_id(SupplierProduct id) {this.supplier_product_id = id; }
+    public void setSupplier_product_id(Product product_id) {this.product_id = product_id; }
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , Customer.class.getSimpleName() + "[" , "]");
-        sj.add(id.toString()).add(supplier_product_id.toString());
+        sj.add(id.toString()).add(product_id.toString());
         return sj.toString();
     }
 }

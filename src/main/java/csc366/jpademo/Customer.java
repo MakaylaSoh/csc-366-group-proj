@@ -27,8 +27,6 @@ public class Customer {
     private String lastName;
 
 
-    public Customer() { }
-
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
