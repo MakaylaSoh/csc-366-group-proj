@@ -18,7 +18,7 @@ public class Product {
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "supplier_id")
     private Supplier supplier_id;
 
     @NotNull

@@ -1,5 +1,7 @@
 package csc366.jpademo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringJoiner;
 
 import javax.persistence.*;
@@ -16,9 +18,9 @@ public class Supplier {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
-    private Product product_id;
+//    @OneToMany(mappedBy = "product_id",
+//            fetch = FetchType.LAZY)
+//    private List<Product> products = new ArrayList<>();
 
     public Supplier() { }
 
@@ -29,13 +31,15 @@ public class Supplier {
         this.id = id;
     }
 
-    public Product getSupplier_product_id() {return product_id; }
+//    public List<Product> getProducts() {
+//        return this.products;
+//    }
 
-    public void setSupplier_product_id(Product product_id) {this.product_id = product_id; }
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , Customer.class.getSimpleName() + "[" , "]");
-        sj.add(id.toString()).add(product_id.toString());
+//        sj.add(id.toString()).add(products.toString());
+        sj.add(id.toString());
         return sj.toString();
     }
 }

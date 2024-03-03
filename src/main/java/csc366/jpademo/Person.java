@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
 @Entity  // indicates that this class maps to a database table
 @Table(
     name = "person",     // may be omitted for default table naming
-    uniqueConstraints = @UniqueConstraint(columnNames={"last_name", "first_name"}) // requires @Column(name=...) 
+    uniqueConstraints = @UniqueConstraint(columnNames={"last_name", "first_name"}) // requires @Column(name=...)
 )
 public class Person {
     @Id
@@ -44,7 +44,7 @@ public class Person {
                fetch = FetchType.LAZY)
     //@OrderColumn(name = "list_idx")
     private List<Address> addresses = new ArrayList<>();
-    
+
     public Person() { }
 
     public Person(String firstName, String lastName, String email) {
@@ -52,7 +52,7 @@ public class Person {
 	this.lastName = lastName;
 	this.email = email;
     }
-    
+
     public Long getId() {
 	return id;
     }
@@ -92,7 +92,7 @@ public class Person {
     public List<Address> getAddresses() {
 	return this.addresses;
     }
-    
+
     @Override
     public String toString() {
 	StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
@@ -104,5 +104,5 @@ public class Person {
     public int hashCode() {
 	return 366;
     }
-    
+
 }

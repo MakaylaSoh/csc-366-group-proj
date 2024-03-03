@@ -19,9 +19,9 @@ public class Receipts {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "receipts",
-            fetch = FetchType.LAZY)
-    private List<Product> receipt_products = new ArrayList<>();
+//    @OneToMany(mappedBy = "receipts",
+//            fetch = FetchType.LAZY)
+//    private List<Product> receipt_products = new ArrayList<>();
 
     @Column(name="receipt_date")
     private LocalDate receipt_date;
@@ -45,9 +45,9 @@ public class Receipts {
         this.id = id;
     }
 
-    public List<Product> getReceipt_products() {
-        return this.receipt_products;
-    }
+//    public List<Product> getReceipt_products() {
+//        return this.receipt_products;
+//    }
 
     public LocalDate getReceipt_date() {
         return receipt_date;
@@ -71,6 +71,13 @@ public class Receipts {
 
     public void setRewards_earned(Integer rewards_earned) {
         this.rewards_earned = rewards_earned;
+    }
+
+    @Override
+    public String toString() {
+        StringJoiner sj = new StringJoiner("," , Customer.class.getSimpleName() + "[" , "]");
+        sj.add(id.toString()).add(receipt_date.toString()).add(total_cost.toString()).add(rewards_earned.toString());
+        return sj.toString();
     }
 
 
