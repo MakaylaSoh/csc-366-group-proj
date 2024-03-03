@@ -5,6 +5,9 @@ import java.util.StringJoiner;
 import javax.persistence.*;
 
 import javax.validation.constraints.NotNull;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
 
 @Entity  // indicates that this class maps to a database table
 @Table(
@@ -22,6 +25,7 @@ public class Customer {
     @NotNull
     @Column(unique=true, name="last_name")
     private String lastName;
+
 
     public Customer() { }
 
