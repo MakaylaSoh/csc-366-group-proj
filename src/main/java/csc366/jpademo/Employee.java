@@ -43,18 +43,18 @@ public class Employee {
     
     // each employee only has a single store
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "store_id")
     private Store store;
 
     // each employee only has one bank account
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "bank_id")
     private Bank bank;
 
     // each employee may have multiple managers
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
-    private Employee manager;
+    // @OneToMany(fetch = FetchType.LAZY)
+    // @JoinColumn(name = "id")
+    // private Employee manager;
 
     public Employee() { }
     
@@ -65,7 +65,7 @@ public class Employee {
         this.position = position;
         this.store = store;
         this.bank = bank;
-        this.manager = manager;
+        // this.manager = manager;
     }
 
     public Long getId() {
@@ -124,18 +124,19 @@ public class Employee {
         this.bank = bank;
     }
 
-    public Employee getManager() {
-        return this.manager;
-    }
+    // public Employee getManager() {
+    //     return this.manager;
+    // }
     
-    public void setManager(Employee manager) {
-        this.manager = manager;
-    }    
+    // public void setManager(Employee manager) {
+    //     this.manager = manager;
+    // }    
 
     @Override
     public String toString() {
 	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
-	    sj.add(id.toString()).add(firstName).add(lastName).add(position).add("store="+store.toString()).add("bank="+bank.toString()).add("manager="+manager.toString());
+	    sj.add(id.toString()).add(firstName).add(lastName).add(position).add("store="+store.toString()).add("bank="+bank.toString());
+        // .add("manager="+manager.toString());
 	    return sj.toString();
     }
 }

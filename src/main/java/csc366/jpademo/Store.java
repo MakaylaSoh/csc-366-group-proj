@@ -29,7 +29,6 @@ public class Store {
     @Column(name="state")
     private String state;
 
-    @Nullable
     @Column(name="city")
     private String city;  
 
@@ -44,9 +43,9 @@ public class Store {
     public Store(String country, String state, String city, String street, int zipcode) {
         this.country = country;
         this.state = state;
-        this.cty = city;
+        this.city = city;
         this.street = street;
-        this.zipCode = zipCode;
+        this.zipcode = zipcode;
     }
     
     public Long getId() {
@@ -90,18 +89,18 @@ public class Store {
     }
 
     public int getZipcode() {
-	    return zipCode;
+	    return zipcode;
     }
 
     public void setZipcode(int zipcode) {
-	    this.zipCode = zipCode;
+	    this.zipcode = zipcode;
     }
 
     @Override
     public String toString()
     {
 	    StringJoiner sj = new StringJoiner("," , Address.class.getSimpleName() + "[" , "]");
-	    sj.add(id.toString()).add(country).add(state).add(city).add(street).add(zipcode);
+	    sj.add(country).add(state).add(city).add(street).add(String.valueOf(zipcode));
 	    return sj.toString();
     }    
 }
