@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.UniqueConstraint;
@@ -99,10 +101,10 @@ public class Employee {
     }
 
     public String getPosition() {
-        return this.age;
+        return this.position;
     }
     
-    public void setPosition(Stirng position) {
+    public void setPosition(String position) {
         this.position = position;
     }
 
@@ -133,7 +135,7 @@ public class Employee {
     @Override
     public String toString() {
 	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
-	    sj.add(id.toString()).add(firstName).add(lastName).add(age).add(position).add("store="=store.toString()).add("bank="=bank.toString()).add("manager="+manager.toString());
+	    sj.add(id.toString()).add(firstName).add(lastName).add(position).add("store="+store.toString()).add("bank="+bank.toString()).add("manager="+manager.toString());
 	    return sj.toString();
     }
 }
