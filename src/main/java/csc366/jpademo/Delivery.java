@@ -32,11 +32,11 @@ public class Delivery {
     private LocalDate date;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "store_id", nullable = false)
     private Store store;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "supplier_contract_id", nullable = false)
     private SupplierContract supplier_contract;
 
     public Delivery() { }

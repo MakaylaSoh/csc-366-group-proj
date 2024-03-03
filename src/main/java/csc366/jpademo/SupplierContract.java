@@ -26,11 +26,11 @@ public class SupplierContract {
     private Long id;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "supplier_id", nullable = false)
     private Supplier supplier;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "store_id", nullable = false)
     private Store store;
 
     public SupplierContract () {}
