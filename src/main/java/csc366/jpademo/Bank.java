@@ -43,7 +43,7 @@ public class Bank {
 
     // each bank only has one employee associated
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "employee_id")
     private Employee employee;
 
     public Bank() { }

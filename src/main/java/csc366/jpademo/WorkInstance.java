@@ -37,7 +37,7 @@ public class WorkInstance {
     
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "employee_id")
     private Employee employee;
 
     @Column(name="clock_in_time")
