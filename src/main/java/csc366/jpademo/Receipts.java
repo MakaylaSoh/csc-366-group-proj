@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.StringJoiner;
 
 import javax.persistence.*;
+import javax.persistence.OneToMany;
 
 
 @Entity  // indicates that this class maps to a database table
@@ -19,10 +20,6 @@ public class Receipts {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-//    @OneToMany(mappedBy = "receipts",
-//            fetch = FetchType.LAZY)
-//    private List<Product> receipt_products = new ArrayList<>();
-
     @Column(name="receipt_date")
     private LocalDate receipt_date;
 
@@ -31,6 +28,14 @@ public class Receipts {
 
     @Column(name="rewards_earned")
     private Integer rewards_earned;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "customer_id", nullable = true)
+    private Customer customer_id;
+
+//    @OneToMany(mappedBy = "product_id",
+//            fetch = FetchType.LAZY)
+//    private List<Product> items = new ArrayList<>();
 
     public Receipts(LocalDate receipt_date, Float total_cost, Integer rewards_earned) {
         this.receipt_date = receipt_date;
@@ -44,10 +49,6 @@ public class Receipts {
     public void setId(Long id) {
         this.id = id;
     }
-
-//    public List<Product> getReceipt_products() {
-//        return this.receipt_products;
-//    }
 
     public LocalDate getReceipt_date() {
         return receipt_date;
@@ -73,10 +74,21 @@ public class Receipts {
         this.rewards_earned = rewards_earned;
     }
 
+    public Customer getCustomer_id() {
+        return customer_id;
+    }
+    public void setCustomer_id(Customer customer_id) {
+        this.customer_id = customer_id;
+    }
+
+//    public List<Product> getItems() {
+//        return this.items;
+//    }
+
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , Customer.class.getSimpleName() + "[" , "]");
-        sj.add(id.toString()).add(receipt_date.toString()).add(total_cost.toString()).add(rewards_earned.toString());
+        sj.add(id.toString()).add(receipt_date.toString()).add(total_cost.toString()).add(rewards_earned.toString()).add(customer_id.toString());
         return sj.toString();
     }
 

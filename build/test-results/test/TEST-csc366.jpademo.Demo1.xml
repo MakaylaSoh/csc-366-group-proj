@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="csc366.jpademo.Demo1" tests="5" skipped="0" failures="5" errors="0" timestamp="2024-03-03T23:14:57" hostname="sameeras-MacBook-Air.local" time="0.346">
+<testsuite name="csc366.jpademo.Demo1" tests="5" skipped="0" failures="5" errors="0" timestamp="2024-03-04T02:31:46" hostname="sameeras-MacBook-Air.local" time="0.322">
   <properties/>
   <testcase name="testPersonAndAddress()" classname="csc366.jpademo.Demo1" time="0.0">
     <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -86,7 +86,7 @@
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
@@ -104,7 +104,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 82 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844)
 	at app//org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
 	at app//org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
@@ -208,7 +208,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
@@ -226,7 +226,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 82 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844)
 	at app//org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
 	at app//org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
@@ -330,7 +330,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
@@ -348,7 +348,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 82 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844)
 	at app//org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
 	at app//org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
@@ -367,7 +367,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	... 97 more
 </failure>
   </testcase>
-  <testcase name="testRemoveAddressAndFlush()" classname="csc366.jpademo.Demo1" time="0.001">
+  <testcase name="testRemoveAddressAndFlush()" classname="csc366.jpademo.Demo1" time="0.0">
     <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
@@ -452,7 +452,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
@@ -470,7 +470,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 82 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844)
 	at app//org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
 	at app//org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
@@ -489,7 +489,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	... 97 more
 </failure>
   </testcase>
-  <testcase name="testJpqlJoin()" classname="csc366.jpademo.Demo1" time="0.0">
+  <testcase name="testJpqlJoin()" classname="csc366.jpademo.Demo1" time="0.001">
     <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
@@ -574,7 +574,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
@@ -592,7 +592,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 82 more
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at app//org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844)
 	at app//org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
 	at app//org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
@@ -611,11 +611,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	... 97 more
 </failure>
   </testcase>
-  <system-out><![CDATA[2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+  <system-out><![CDATA[2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -714,7 +714,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -731,11 +731,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -833,7 +833,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -850,7 +850,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 96 common frames omitted
-2024-03-03 15:14:57 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@79fc4e99]
+2024-03-03 18:31:46 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@79fc4e99]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -935,7 +935,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -953,7 +953,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 82 common frames omitted
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -970,11 +970,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1073,7 +1073,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1090,11 +1090,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1192,7 +1192,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1209,7 +1209,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 96 common frames omitted
-2024-03-03 15:14:57 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@70bc9070]
+2024-03-03 18:31:46 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@57f89680]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1294,7 +1294,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1312,7 +1312,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 82 common frames omitted
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1329,11 +1329,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1432,7 +1432,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1449,11 +1449,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1551,7 +1551,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1568,7 +1568,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 96 common frames omitted
-2024-03-03 15:14:57 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@1a7437d8]
+2024-03-03 18:31:46 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@48126a17]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1653,7 +1653,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1671,7 +1671,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 82 common frames omitted
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1688,11 +1688,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1791,7 +1791,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1808,11 +1808,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -1910,7 +1910,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -1927,7 +1927,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 96 common frames omitted
-2024-03-03 15:14:57 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@49392256]
+2024-03-03 18:31:46 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@2dd4a7a9]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -2012,7 +2012,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -2030,7 +2030,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 82 common frames omitted
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -2047,11 +2047,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -2150,7 +2150,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -2167,11 +2167,11 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 97 common frames omitted
-2024-03-03 15:14:57 - Starting Demo1 on sameeras-Air.lan with PID 74559 (started by sameera in /Users/sameera/Desktop/366Project)
-2024-03-03 15:14:57 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2024-03-03 15:14:57 - No active profile set, falling back to default profiles: default
-2024-03-03 15:14:57 - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+2024-03-03 18:31:46 - Starting Demo1 on sameeras-Air.lan with PID 75710 (started by sameera in /Users/sameera/Desktop/366Project)
+2024-03-03 18:31:46 - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2024-03-03 18:31:46 - No active profile set, falling back to default profiles: default
+2024-03-03 18:31:46 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -2269,7 +2269,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
@@ -2286,7 +2286,7 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 96 common frames omitted
-2024-03-03 15:14:57 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@6cac0334]
+2024-03-03 18:31:46 - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@580154b3] to prepare test instance [csc366.jpademo.Demo1@9c40f43]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -2371,7 +2371,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.3.RELEASE.jar:5.2.3.RELEASE]
@@ -2389,7 +2389,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.3.RELEASE.jar:5.2.3.RELEASE]
 	... 82 common frames omitted
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Supplier.products
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: csc366.jpademo.Product.product_id in csc366.jpademo.Receipts.items
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53) ~[hibernate-core-5.4.10.Final.jar:5.4.10.Final]

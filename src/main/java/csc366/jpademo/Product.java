@@ -1,9 +1,12 @@
 package csc366.jpademo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringJoiner;
 
 import javax.persistence.*;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 import javax.validation.constraints.NotNull;
 
@@ -20,6 +23,10 @@ public class Product {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "supplier_id")
     private Supplier supplier_id;
+
+//    @OneToMany(mappedBy = "receipts_items",
+//            fetch = FetchType.LAZY)
+//    private List<Receipts> product_history = new ArrayList<>();
 
     @NotNull
     @Column(name="cost")
@@ -42,6 +49,10 @@ public class Product {
     public void setSupplier_id(Supplier supplier_id) {
         this.supplier_id = supplier_id;
     }
+
+//    public List<Receipts> getProduct_history() {
+//        return this.product_history;
+//    }
 
     public Float getCost() {
         return cost;
