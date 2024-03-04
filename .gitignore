@@ -1,4 +1,4 @@
 # Build Artifacts
-/bin/
-/build/
-.gradle
+bin/
+build/
+.gradle/
