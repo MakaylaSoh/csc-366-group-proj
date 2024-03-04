@@ -1,9 +1,12 @@
 package csc366.jpademo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringJoiner;
 
 import javax.persistence.*;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 import javax.validation.constraints.NotNull;
 
@@ -21,9 +24,16 @@ public class Product {
     @JoinColumn(name = "supplier_id")
     private Supplier supplier_id;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")
+    private Order order;
+
     @NotNull
     @Column(name="cost")
     private Float cost;
+
+    @Column(name="quantity")
+    private Integer quantity;
 
     public Product(Float cost) {
         this.cost = cost;
@@ -49,6 +59,10 @@ public class Product {
     public void setCost(Float cost) {
         this.cost = cost;
     }
+
+    public Integer getQuantity() { return quantity; }
+
+    public void setQuantity(Integer quantity) { this.quantity = quantity; }
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , Customer.class.getSimpleName() + "[" , "]");
