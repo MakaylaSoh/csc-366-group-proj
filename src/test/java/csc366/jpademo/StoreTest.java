@@ -1,7 +1,9 @@
 package csc366.jpademo;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -48,22 +50,124 @@ public class StoreTest {
     @Autowired
     private StoreRepository storeRepository;
 
-    private final Store store = new Store("TestCountry", "TestState", "TestCity", "TestStreet", 12345);
+    private final Store store1 = new Store("Country1", "State1", "City1", "Street1", 11111);
+    private final Store store2 = new Store("Country1", "State2", "City2", "Street2", 22222);
+    private final Store store3 = new Store("Country2", "State3", "City2", "Street3", 33333);
+    private final Store store4 = new Store("Country2", "State3", "City2", "Street4", 33333);
 
     @BeforeEach
     private void setup() {
-        storeRepository.saveAndFlush(store);
+        // add some stores to the repo
+        storeRepository.saveAndFlush(store1);
+        storeRepository.saveAndFlush(store2);
+        storeRepository.saveAndFlush(store3);
+        storeRepository.saveAndFlush(store4);
     }
 
     @Test
     @Order(1)
-    public void testStore() {
-        List<Store> store2 = storeRepository.findByCountry("TestCountry");
-        Store store3 = storeRepository.findByStoreId(store2.get(0).getId());
+    public void testFindById() {
+        Long store3Id = store3.getId();
+        Store retStore = storeRepository.findByStoreId(store3Id);
 
-        log.info(store3.toString());
+        log.info(retStore.toString());
 
-        assertNotNull(store2);
-        assertEquals(store2.size(), 1);
+        assertNotNull(retStore);
+        assertEquals(retStore, store3);
+        
+    }
+
+    @Test
+    @Order(2)
+    public void testFindByCountry() {
+        List<Store> retStore = storeRepository.findByCountry("Country1");
+
+        log.info(retStore.toString());
+
+        assertNotNull(retStore);
+        assertEquals(retStore.size(), 2);
+    }
+
+    @Test
+    @Order(3)
+    public void testFindByCountryAndState() {
+        List<Store> expected = new ArrayList<Store>();
+        expected.add(store2);
+        List<Store> retStore = storeRepository.findByCountryAndState("Country1", "State2");
+
+        log.info(retStore.toString());
+
+        assertNotNull(retStore);
+        assertEquals(retStore.size(), 1);
+        assertEquals(retStore, expected);
+
+    }
+
+    @Test
+    @Order(4)
+    public void testFindByCountryAndStateAndCity() {
+        List<Store> expected = new ArrayList<Store>();
+        expected.add(store3);
+        expected.add(store4);
+        List<Store> retStore = storeRepository.findByCountryAndStateAndCity("Country2", "State3", "City2");
+
+        log.info(retStore.toString());
+
+        assertNotNull(retStore);
+        assertEquals(retStore.size(), 2);
+        assertEquals(retStore, expected);
+    }
+
+    @Test
+    @Order(5)
+    public void testFindByCountryAndStateAndCityAndStreet() {
+        List<Store> expected = new ArrayList<Store>();
+        expected.add(store4);
+        List<Store> retStore = storeRepository.findByCountryAndStateAndCityAndStreet("Country2", "State3", "City2", "Street4");
+
+        log.info(retStore.toString());
+
+        assertNotNull(retStore);
+        assertEquals(retStore.size(), 1);
+        assertEquals(retStore, expected);
+    }
+
+    @Test
+    @Order(6)
+    public void testFindByCountryAndStateAndCityAndStreetAndZipcode() {
+        List<Store> expected = new ArrayList<Store>();
+        expected.add(store4);
+        List<Store> retStore = storeRepository.findByCountryAndStateAndCityAndStreetAndZipcode("Country2", "State3", "City2", "Street4", 33333);
+
+        log.info(retStore.toString());
+
+        assertNotNull(retStore);
+        assertEquals(retStore.size(), 1);
+        assertEquals(retStore, expected);
+    }
+
+    @Test
+    @Order(7)
+    public void testFindByZipcode() {
+        List<Store> expected = new ArrayList<Store>();
+        expected.add(store3);
+        expected.add(store4);
+        List<Store> retStore = storeRepository.findByZipcode(33333);
+
+        log.info(retStore.toString());
+
+        assertNotNull(retStore);
+        assertEquals(retStore.size(), 2);
+        assertEquals(retStore, expected);
+    }
+
+    @Test
+    @Order(8)
+    public void testDeleteByStoreId() {
+        Long store3Id = store3.getId();
+        storeRepository.deleteStoreByStoreId(store3Id);
+        
+        Store retStore = storeRepository.findByStoreId(store3Id);
+        assertNull(retStore);
     }
 }

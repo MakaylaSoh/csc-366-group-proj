@@ -25,5 +25,5 @@ public interface StoreRepository extends JpaRepository<Store, Long>{
     //DELETE
     @Modifying
     @Query("delete from Store s where s.id = :storeId")
-    long deleteStoreByStoreId(@Param("storeId") Long storeId);    
+    void deleteStoreByStoreId(@Param("storeId") Long storeId);    
 }
