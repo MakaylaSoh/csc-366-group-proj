@@ -8,8 +8,6 @@ import javax.persistence.*;
 
 import javax.validation.constraints.NotNull;
 import javax.persistence.OneToMany;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 
 @Entity  // indicates that this class maps to a database table
@@ -31,7 +29,7 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer_id",
             fetch = FetchType.LAZY)
-    private List<Receipts> order_history = new ArrayList<>();
+    private List<Order> order_history = new ArrayList<>();
 
     public Customer() { }
 
@@ -58,7 +56,7 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public List<Receipts> getOrder_history() {
+    public List<Order> getOrder_history() {
         return this.order_history;
     }
 
