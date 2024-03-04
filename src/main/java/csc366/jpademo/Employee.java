@@ -136,7 +136,6 @@ public class Employee {
     public String toString() {
 	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
 	    sj.add(id.toString()).add(firstName).add(lastName).add(position).add("store="+store.toString()).add("bank="+bank.toString());
-        // .add("manager="+manager.toString());
 	    return sj.toString();
     }
 }
