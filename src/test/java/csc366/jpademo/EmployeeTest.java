@@ -42,28 +42,6 @@ import org.slf4j.LoggerFactory;
 	"logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %msg%n"
 })
 @TestMethodOrder(OrderAnnotation.class)
-public class StoreTest {
-    private final static Logger log = LoggerFactory.getLogger(StoreTest.class);
-
-    @Autowired
-    private StoreRepository storeRepository;
-
-    private final Store store = new Store("TestCountry", "TestState", "TestCity", "TestStreet", 12345);
-
-    @BeforeEach
-    private void setup() {
-        storeRepository.saveAndFlush(store);
-    }
-
-    @Test
-    @Order(1)
-    public void testStore() {
-        List<Store> store2 = storeRepository.findByCountry("TestCountry");
-        Store store3 = storeRepository.findByStoreId(store2.get(0).getId());
-
-        log.info(store3.toString());
-
-        assertNotNull(store2);
-        assertEquals(store2.size(), 1);
-    }
+public class EmployeeTest {
+    
 }

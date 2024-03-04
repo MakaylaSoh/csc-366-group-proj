@@ -90,7 +90,7 @@ public class Store {
     @Override
     public String toString()
     {
-	    StringJoiner sj = new StringJoiner("," , Address.class.getSimpleName() + "[" , "]");
+	    StringJoiner sj = new StringJoiner("," , Store.class.getSimpleName() + "[" , "]");
 	    sj.add(country).add(state).add(city).add(street).add(String.valueOf(zipcode));
 	    return sj.toString();
     }    

@@ -131,7 +131,7 @@ public class Employee {
 
     @Override
     public String toString() {
-	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
+	    StringJoiner sj = new StringJoiner("," , Employee.class.getSimpleName() + "[" , "]");
 	    sj.add(id.toString()).add(firstName).add(lastName).add(position).add("store="+store.toString()).add("bank="+bank.toString());
 	    return sj.toString();
     }
