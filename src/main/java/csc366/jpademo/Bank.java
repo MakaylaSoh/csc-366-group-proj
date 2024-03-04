@@ -100,7 +100,7 @@ public class Bank {
         return this.employee;
     }
     
-    public void setEmployee(Bank bank) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
