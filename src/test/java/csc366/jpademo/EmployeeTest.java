@@ -18,6 +18,8 @@ import org.springframework.test.context.TestPropertySource;
 import java.util.List;
 import java.util.ArrayList;
 
+import java.time.LocalDate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,15 +50,23 @@ public class EmployeeTest {
     @Autowired
     private StoreRepository storeRepository;
 
-    // private final Employee emp1 = new Employee("First1", "Last1", "birthday1", "position1", );
+	@Autowired
+	private EmployeeRepository employeeRepsitory;
+
+	@Autowired
+	private BankRepository bankRepository;
+
+	private final Store store1 = new Store("country1", "state1", "city1", "street1", 11111);
+	private final Bank bank1 = new Bank("first1", "last1", "123456789", "Capital One", null);
+    private final Employee emp1 = new Employee("First1", "Last1", LocalDate.of(2002, 9, 12), "position1", store1, bank1);
 
     @BeforeEach
     private void setup() {
         // add some stores to the repo
         storeRepository.saveAndFlush(store1);
-        storeRepository.saveAndFlush(store2);
-        storeRepository.saveAndFlush(store3);
-        storeRepository.saveAndFlush(store4);
+        // storeRepository.saveAndFlush(store2);
+        // storeRepository.saveAndFlush(store3);
+        // storeRepository.saveAndFlush(store4);
     }
 
     
