@@ -43,5 +43,21 @@ import org.slf4j.LoggerFactory;
 })
 @TestMethodOrder(OrderAnnotation.class)
 public class EmployeeTest {
+	private final static Logger log = LoggerFactory.getLogger(EmployeeTest.class);
+
+    @Autowired
+    private StoreRepository storeRepository;
+
+    // private final Employee emp1 = new Employee("First1", "Last1", "birthday1", "position1", );
+
+    @BeforeEach
+    private void setup() {
+        // add some stores to the repo
+        storeRepository.saveAndFlush(store1);
+        storeRepository.saveAndFlush(store2);
+        storeRepository.saveAndFlush(store3);
+        storeRepository.saveAndFlush(store4);
+    }
+
     
 }
