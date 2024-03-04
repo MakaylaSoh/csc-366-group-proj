@@ -18,9 +18,9 @@ public class Supplier {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-//    @OneToMany(mappedBy = "product_id",
-//            fetch = FetchType.LAZY)
-//    private List<Product> products = new ArrayList<>();
+    @OneToMany(mappedBy = "supplier_id",
+            fetch = FetchType.LAZY)
+    private List<Product> products = new ArrayList<>();
 
     public Supplier() { }
 
@@ -31,15 +31,15 @@ public class Supplier {
         this.id = id;
     }
 
-//    public List<Product> getProducts() {
-//        return this.products;
-//    }
+    public List<Product> getProducts() {
+        return this.products;
+    }
 
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , Customer.class.getSimpleName() + "[" , "]");
-//        sj.add(id.toString()).add(products.toString());
-        sj.add(id.toString());
+        sj.add(id.toString()).add(products.toString());
+//        sj.add(id.toString());
         return sj.toString();
     }
 }
