@@ -7,7 +7,7 @@
 ## Commands
 Build with 
 ```
-./gradle build
+./gradlew build
 ```
 
 Run all tests with:
