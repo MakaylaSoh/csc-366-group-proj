@@ -1,6 +1,8 @@
 package csc366.jpademo;
 
 import java.util.StringJoiner;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -47,11 +50,10 @@ public class Employee {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bank_id")
     private Bank bank;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "work_shift_id")
+    private List<ScheduledWorkShift> shifts = new ArrayList<>();
 
-    // each employee may have multiple managers
-    // @OneToMany(fetch = FetchType.LAZY)
-    // @JoinColumn(name = "id")
-    // private Employee manager;
 
     public Employee() { }
     
@@ -119,6 +121,13 @@ public class Employee {
     
     public void setBank(Bank bank) {
         this.bank = bank;
+    }
+
+    public void setShifts(ArrayList<ScheduledWorkShift> shifts) {
+        this.shifts = shifts;
+    }
+    public List<ScheduledWorkShift> getShifts() {
+        return this.shifts;
     }
 
     // public Employee getManager() {
