@@ -26,7 +26,7 @@ import javax.validation.constraints.NotNull;
 @Entity  // indicates that this class maps to a database table
 @Table(
     name = "work_shift",     // may be omitted for default table naming
-    uniqueConstraints = @UniqueConstraint(columnNames={"last_name", "first_name"}) // requires @Column(name=...) 
+    uniqueConstraints = @UniqueConstraint(columnNames={"employee_id", "clock_in_time"}) // requires @Column(name=...) 
 )
 public class ScheduledWorkShift {
     @Id

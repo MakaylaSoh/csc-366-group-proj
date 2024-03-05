@@ -1,7 +1,9 @@
 package csc366.jpademo;
 
 import java.util.Set;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.StringJoiner;
 
 import javax.persistence.Entity;
@@ -50,9 +52,10 @@ public class Employee {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bank_id")
     private Bank bank;
-    // @OneToMany(fetch = FetchType.LAZY)
-    // @JoinColumn(name = "work_shift_id")
-    // private <ScheduledWorkShift> shifts;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "work_shift_id")
+    private List<ScheduledWorkShift> shifts = new ArrayList<>();
+
 
     public Employee() { }
     
@@ -120,6 +123,13 @@ public class Employee {
     
     public void setBank(Bank bank) {
         this.bank = bank;
+    }
+
+    public void setShifts(ArrayList<ScheduledWorkShift> shifts) {
+        this.shifts = shifts;
+    }
+    public List<ScheduledWorkShift> getShifts() {
+        return this.shifts;
     }
 
     // public Employee getManager() {

@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.StringJoiner;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity  // indicates that this class maps to a database table
@@ -25,16 +27,21 @@ public class Order {
     @Column(name="rewards_earned")
     private Integer rewards_earned;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", nullable = true)
     private Customer customer_id;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id")
+    private List<Product> products = new ArrayList<>();;
+
     
 
-    public Order(LocalDate receipt_date, Float total_cost, Integer rewards_earned) {
+    public Order(LocalDate receipt_date, Float total_cost, Integer rewards_earned, ArrayList<Product> products) {
         this.receipt_date = receipt_date;
         this.total_cost = total_cost;
         this.rewards_earned = rewards_earned;
+        this.products = products;
     }
 
     public Long getId() {

@@ -24,9 +24,6 @@ public class Product {
     @JoinColumn(name = "supplier_id")
     private Supplier supplier_id;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id")
-    private Order order;
 
     @NotNull
     @Column(name="cost")
