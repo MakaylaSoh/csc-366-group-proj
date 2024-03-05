@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbc51b40-1169-432a-9267-baf97f678d29" name="Changes" comment="supplierProduct, supplier, customer, rewardsAccount">
-      <change afterPath="$PROJECT_DIR$/src/main/java/csc366/jpademo/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/csc366/jpademo/CustomerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csc366/jpademo/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csc366/jpademo/Customer.java" afterDir="false" />
-    </list>
+    <list default="true" id="fbc51b40-1169-432a-9267-baf97f678d29" name="Changes" comment="supplierProduct, supplier, customer, rewardsAccount" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
