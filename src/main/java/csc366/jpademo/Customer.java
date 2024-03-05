@@ -20,11 +20,11 @@ public class Customer {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="first_name")
+    @Column(name="firstName")
     private String firstName;
 
     @NotNull
-    @Column(unique=true, name="last_name")
+    @Column(unique=true, name="lastName")
     private String lastName;
 
     @OneToMany(mappedBy = "customer_id",

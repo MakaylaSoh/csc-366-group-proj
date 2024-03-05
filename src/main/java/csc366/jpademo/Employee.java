@@ -1,8 +1,8 @@
 package csc366.jpademo;
 
-import java.util.Set;
-import java.util.HashSet;
 import java.util.StringJoiner;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +17,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.UniqueConstraint;
 
-import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 @Entity
 @Table(
@@ -35,8 +35,8 @@ public class Employee {
     @Column(unique=true, name="last_name")
     private String lastName;
 
-    @Column(name="age")
-    private int age;
+    @Column(name="birthday")
+    private LocalDate birthday;
 
     @Column(name="position")
     private String position;
@@ -50,18 +50,17 @@ public class Employee {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bank_id")
     private Bank bank;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "work_shift_id")
+    private List<ScheduledWorkShift> shifts = new ArrayList<>();
 
-    // each employee may have multiple managers
-    // @OneToMany(fetch = FetchType.LAZY)
-    // @JoinColumn(name = "id")
-    // private Employee manager;
 
     public Employee() { }
     
-    public Employee(String firstName, String lastName, int age, String position, Store store, Bank bank, Employee manager) {
+    public Employee(String firstName, String lastName, LocalDate birthday, String position, Store store, Bank bank, Employee manager) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.birthday = birthday;
         this.position = position;
         this.store = store;
         this.bank = bank;
@@ -92,12 +91,12 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return this.age;
+    public LocalDate getBirthday() {
+        return this.birthday;
     }
     
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
     public String getPosition() {
@@ -124,6 +123,13 @@ public class Employee {
         this.bank = bank;
     }
 
+    public void setShifts(ArrayList<ScheduledWorkShift> shifts) {
+        this.shifts = shifts;
+    }
+    public List<ScheduledWorkShift> getShifts() {
+        return this.shifts;
+    }
+
     // public Employee getManager() {
     //     return this.manager;
     // }
@@ -134,7 +140,7 @@ public class Employee {
 
     @Override
     public String toString() {
-	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
+	    StringJoiner sj = new StringJoiner("," , Employee.class.getSimpleName() + "[" , "]");
 	    sj.add(id.toString()).add(firstName).add(lastName).add(position).add("store="+store.toString()).add("bank="+bank.toString());
 	    return sj.toString();
     }
