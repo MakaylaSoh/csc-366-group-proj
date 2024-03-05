@@ -40,23 +40,19 @@ public class WorkInstance {
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
-    @Column(name="clock_in_time")
+    @Column(name="clockInTime")
     private LocalTime clock_in_time;
 
-    @Column(name="clock_out_time")
+    @Column(name="clockOutTime")
     private LocalTime clock_out_time;
-
-    @Column(name="total_hours")
-    private Integer total_hours;
 
     
     public WorkInstance() { }
     
-    public WorkInstance(LocalDate date, LocalTime clock_in_time, LocalTime clock_out_time, int total_hours) {
+    public WorkInstance(LocalDate date, LocalTime clock_in_time, LocalTime clock_out_time) {
 	this.date = date;
 	this.clock_in_time = clock_in_time;
 	this.clock_out_time = clock_out_time;
-    this.total_hours = total_hours;
     }
     
     public Long getId() {
@@ -94,19 +90,12 @@ public class WorkInstance {
 	this.employee = employee;
     }
 
-    public Integer getTotalHours() {
-	return total_hours;
-    }
-    public void setTotalHours(Integer totalHours) {
-	this.total_hours = total_hours;
-    }
-
 
     @Override
     public String toString() {
 	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
-	    sj.add(id.toString()).add(date.toString()).add(clock_in_time.toString()).add(clock_out_time.toString()).add(total_hours.toString()).add("employee="+employee.toString());
+	    sj.add(id.toString()).add(date.toString()).add(clock_in_time.toString()).add(clock_out_time.toString()).add("employee="+employee.toString());
 	    return sj.toString();
     }
-    
+
 }
