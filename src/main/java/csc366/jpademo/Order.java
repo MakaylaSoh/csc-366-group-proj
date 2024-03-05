@@ -82,14 +82,14 @@ public class Order {
         this.customer_id = customer_id;
     }
 
-//    public List<Product> getItems() {
-//        return this.items;
-//    }
+    public List<Product> getProducts() {
+        return this.products;
+    }
 
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , Customer.class.getSimpleName() + "[" , "]");
-        sj.add(id.toString()).add(receipt_date.toString()).add(total_cost.toString()).add(rewards_earned.toString()).add(customer_id.toString());
+        sj.add(id.toString()).add(receipt_date.toString()).add(total_cost.toString()).add(rewards_earned.toString()).add(customer_id.toString()).add(products.toString());
         return sj.toString();
     }
 
