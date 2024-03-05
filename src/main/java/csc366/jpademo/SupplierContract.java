@@ -3,6 +3,8 @@ package csc366.jpademo;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.StringJoiner;
+import java.util.*;
+import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,20 +27,20 @@ public class SupplierContract {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "supplier_id", nullable = false)
     private Supplier supplier;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id", nullable = false)
-    private Store store;
+    private List<Store> stores = new ArrayList<>();
 
     public SupplierContract () {}
 
-    public SupplierContract(long id, Supplier supplier, Store store) {
+    public SupplierContract(long id, Supplier supplier, List<Store> stores) {
         this.id = id;
         this.supplier = supplier;
-        this.store = store;
+        this.stores = stores;
     }
 
     public Long getId() {
@@ -55,17 +57,17 @@ public class SupplierContract {
         this.supplier = supplier;
     }
 
-    public Store getStore() {
-        return store;
+    public List<Store> getStores() {
+        return stores;
     }
-    public void setStore(Store store) {
-        this.store = store;
+    public void setStore(List<Store> stores) {
+        this.stores = stores;
     }
 
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , SupplierContract.class.getSimpleName() + "[" , "]");
-        sj.add(id.toString()).add(supplier.toString()).add(store.toString());
+        sj.add(id.toString()).add(supplier.toString()).add(stores.toString());
         return sj.toString();
     }
 
