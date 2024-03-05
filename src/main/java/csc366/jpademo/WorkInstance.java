@@ -4,20 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.StringJoiner;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.OrderColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.ManyToOne;
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -25,7 +12,7 @@ import java.time.LocalTime;
 
 @Entity  // indicates that this class maps to a database table
 @Table(
-    name = "work_instance" // may be omitted for default table naming
+    name = "workInstance" // may be omitted for default table naming
 )
 public class WorkInstance {
     @Id
@@ -36,23 +23,23 @@ public class WorkInstance {
     private LocalDate date;
     
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
     @Column(name="clockInTime")
-    private LocalTime clock_in_time;
+    private LocalTime clockInTime;
 
     @Column(name="clockOutTime")
-    private LocalTime clock_out_time;
+    private LocalTime clockOutTime;
 
     
     public WorkInstance() { }
     
-    public WorkInstance(LocalDate date, LocalTime clock_in_time, LocalTime clock_out_time) {
+    public WorkInstance(LocalDate date, LocalTime clockInTime, LocalTime clockOutTime) {
 	this.date = date;
-	this.clock_in_time = clock_in_time;
-	this.clock_out_time = clock_out_time;
+	this.clockInTime = clockInTime;
+	this.clockOutTime = clockOutTime;
     }
     
     public Long getId() {
@@ -69,18 +56,18 @@ public class WorkInstance {
 	this.date = date;
     }
 
-    public LocalTime getClock_in_time() {
-	return clock_in_time;
+    public LocalTime getClockInTime() {
+	return clockInTime;
     }
-    public void setLastName(LocalTime clock_in_time) {
-	this.clock_in_time = clock_in_time;
+    public void setClockInTime(LocalTime clock_in_time) {
+	this.clockInTime = clock_in_time;
     }
 
-    public LocalTime getClock_out_time() {
-	return clock_out_time;
+    public LocalTime getClockOutTime() {
+	return clockOutTime;
     }
-    public void setClock_out_time(LocalTime clock_out_time) {
-	this.clock_out_time = clock_out_time;
+    public void setClockOutTime(LocalTime clock_out_time) {
+	this.clockOutTime = clock_out_time;
     }
 
     public Employee getEmployee() {
@@ -93,9 +80,9 @@ public class WorkInstance {
 
     @Override
     public String toString() {
-	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
-	    sj.add(id.toString()).add(date.toString()).add(clock_in_time.toString()).add(clock_out_time.toString()).add("employee="+employee.toString());
-	    return sj.toString();
+	    StringJoiner sj = new StringJoiner("," , WorkInstance.class.getSimpleName() + "[" , "]");
+	    sj.add(id.toString()).add(date.toString()).add(clockInTime.toString()).add(clockOutTime.toString()).add("employee="+employee.toString());
+        return sj.toString();
     }
 
 }

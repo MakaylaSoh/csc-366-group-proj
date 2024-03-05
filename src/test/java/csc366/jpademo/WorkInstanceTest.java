@@ -53,17 +53,17 @@ public class WorkInstanceTest {
     private WorkInstanceRepository workInstanceRepository;
 
     LocalDate date1 = LocalDate.of(2024, 3, 4);
+    LocalDate date2 = LocalDate.of(2024, 3, 5);
     LocalTime timeIn1 = LocalTime.of(6, 15);
     LocalTime timeOut1 = LocalTime.of(7, 15);
 
     LocalTime timeIn2 = LocalTime.of(6, 30);
     LocalTime timeOut2 = LocalTime.of(7, 30);
     private final WorkInstance wi1 = new WorkInstance(date1, timeIn1, timeOut1);
-    private final WorkInstance wi2 = new WorkInstance(date1, timeIn2, timeOut2);
+    private final WorkInstance wi2 = new WorkInstance(date2, timeIn2, timeOut2);
 
     @BeforeEach
     private void setup() {
-        // add some stores to the repo
         workInstanceRepository.saveAndFlush(wi1);
         workInstanceRepository.saveAndFlush(wi2);
     }
@@ -89,7 +89,7 @@ public class WorkInstanceTest {
         log.info(retWI.toString());
 
         assertNotNull(retWI);
-        assertEquals(retWI.size(), 2);
+        assertEquals(retWI, date1);
     }
 
     @Test
@@ -100,7 +100,7 @@ public class WorkInstanceTest {
         log.info(retWI.toString());
 
         assertNotNull(retWI);
-        assertEquals(retWI.size(), 1);
+        assertEquals(retWI, timeIn1);
     }
 
     @Test
@@ -111,7 +111,7 @@ public class WorkInstanceTest {
         log.info(retWI.toString());
 
         assertNotNull(retWI);
-        assertEquals(retWI.size(), 1);
+        assertEquals(retWI, timeOut2);
     }
 
     @Test
