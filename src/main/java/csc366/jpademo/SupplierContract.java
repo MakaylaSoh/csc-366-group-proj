@@ -37,8 +37,7 @@ public class SupplierContract {
 
     public SupplierContract () {}
 
-    public SupplierContract(long id, Supplier supplier, List<Store> stores) {
-        this.id = id;
+    public SupplierContract(Supplier supplier, List<Store> stores) {
         this.supplier = supplier;
         this.stores = stores;
     }
