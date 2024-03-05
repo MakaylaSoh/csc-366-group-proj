@@ -65,7 +65,7 @@ public class SupplierContract {
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , SupplierContract.class.getSimpleName() + "[" , "]");
-        sj.add(id.toString()).add(supplier).add(store);
+        sj.add(id.toString()).add(supplier.toString()).add(store.toString());
         return sj.toString();
     }
 

@@ -87,7 +87,7 @@ public class Delivery {
     @Override
     public String toString() {
         StringJoiner sj = new StringJoiner("," , Delivery.class.getSimpleName() + "[" , "]");
-        sj.add(id.toString()).add(time).add(date).add(store).add(supplier_contract);
+        sj.add(id.toString()).add(time.toString()).add(date.toString()).add(store.toString()).add(supplier_contract.toString());
         return sj.toString();
     }
 
