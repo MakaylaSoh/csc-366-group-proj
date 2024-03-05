@@ -2,6 +2,10 @@ package csc366.jpademo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,8 +21,6 @@ import org.springframework.test.context.TestPropertySource;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-// Demo0: Add, list, and remove Person instances
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
@@ -42,69 +44,39 @@ public class TestSWS {
     private final static Logger log = LoggerFactory.getLogger(TestSWS.class);
     
     @Autowired
-    private PersonRepository personRepository;
+    private ScheduledWorkShiftRepository scheduledWorkShiftRepository;
 
-    private final Person person = new Person("test", "test", "test@calpoly.edu");  // "reference" person
+    private final ScheduledWorkShift sw = new ScheduledWorkShift(LocalDate.now(), LocalTime.of(17, 59, 59), 
+                                                    LocalTime.of(23, 59, 59), 6.0);
     
     @BeforeEach
     private void setup() {
-	personRepository.saveAndFlush(person);
+	    scheduledWorkShiftRepository.saveAndFlush(sw);
     }
     
     @Test
     @Order(1)
-    public void testSavePerson() {
-	Person person2 = personRepository.findByFirstName("test");
+    public void testSaveScheduledWorkShift() {
+        Long swId = sw.getId();
 
-	log.info(person2.toString());
-	
-	assertNotNull(person);
-	assertEquals(person2.getFirstName(), person.getFirstName());
-	assertEquals(person2.getLastName(), person.getLastName());
+        ScheduledWorkShift sw2 = scheduledWorkShiftRepository.findByScheduledWorkShiftId(swId);
+
+        log.info(sw2.toString());
+        
+        assertNotNull(sw);
+        assertEquals(sw2.getInTime(), sw.getInTime());
+        assertEquals(sw2.getOutTime(), sw.getOutTime());
+        assertEquals(sw2.getTotalHours(), sw.getTotalHours());
     }
     
     @Test
     @Order(2)
-    public void testGetPerson() {
-	Person person2 = personRepository.findByFirstName("test");
-	assertNotNull(person);
-	assertEquals(person2.getFirstName(), person.getFirstName());
-	assertEquals(person2.getLastName(), person.getLastName());
-    }
+    public void testDeleteByScheduledWorkShiftId() {
+        Long swId = sw.getId();
+        scheduledWorkShiftRepository.deleteByScheduledWorkShiftId(swId);
 
-    @Test
-    @Order(3)
-    public void testDeletePerson() {
-	personRepository.delete(person);
-	personRepository.flush();
-    }
-    
-    @Test
-    @Order(4)
-    public void testFindAllPersons() {
-	assertNotNull(personRepository.findAll());
-    }
-    
-    @Test
-    @Order(5)
-    public void testDeletByPersonId() {
-	Person e = personRepository.findByFirstName("test");
-	personRepository.deleteById(e.getId());
-	personRepository.flush();
-    }
-
-    @Test
-    @Order(6)
-    public void testJpqlFinder() {
-	Person e = personRepository.findByNameJpql("test");
-	assertEquals(e.getFirstName(), person.getFirstName());
-    }
-
-    @Test
-    @Order(7)
-    public void testSqlFinder() {
-	Person p = personRepository.findByNameSql("test");
-	assertEquals(p.getFirstName(), person.getFirstName());
+        ScheduledWorkShift retSw = scheduledWorkShiftRepository.findByScheduledWorkShiftId(swId);
+        assertNull(retSw);
     }
 
 }
