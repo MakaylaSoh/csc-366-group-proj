@@ -22,7 +22,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(
     name = "bank",     // may be omitted for default table naming
-    uniqueConstraints = @UniqueConstraint(columnNames={"account_number", "first_name", "last_name"}) // requires @Column(name=...) 
+    uniqueConstraints = @UniqueConstraint(columnNames={"accountNumber", "first_name", "last_name"}) // requires @Column(name=...) 
 )
 public class Bank {
     @Id
@@ -35,11 +35,11 @@ public class Bank {
     @Column(name="last_name")
     private String lastName;
 
-    @Column(name="account_number")
-    private String account_number;
+    @Column(name="accountNumber")
+    private String accountNumber;
 
-    @Column(name="bank_name")
-    private String bank_name;
+    @Column(name="name")
+    private String name;
 
     // each bank only has one employee associated
     @OneToOne(fetch = FetchType.LAZY)
@@ -48,11 +48,11 @@ public class Bank {
 
     public Bank() { }
     
-    public Bank(String firstName, String lastName, String account_number, String bank_name, Employee employee) {
+    public Bank(String firstName, String lastName, String accountNumber, String name, Employee employee) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.account_number = account_number;
-        this.bank_name = bank_name;
+        this.accountNumber = accountNumber;
+        this.name = name;
         this.employee = employee;
     }
 
@@ -81,33 +81,33 @@ public class Bank {
     }
 
     public String getAccountNumber() {
-        return this.account_number;
+        return this.accountNumber;
     }
     
-    public void setAccountNumber(String account_number) {
-        this.account_number = account_number;
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
-    public String getBankName() {
-        return this.bank_name;
+    public String getName() {
+        return this.name;
     }
     
-    public void setBankName(String bank_name) {
-        this.bank_name = bank_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Employee getEmployee() {
         return this.employee;
     }
     
-    public void setEmployee(Bank bank) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
     @Override
     public String toString() {
-	    StringJoiner sj = new StringJoiner("," , Person.class.getSimpleName() + "[" , "]");
-	    sj.add(id.toString()).add(firstName).add(lastName).add(account_number).add("employee="+employee.toString());
+	    StringJoiner sj = new StringJoiner("," , Bank.class.getSimpleName() + "[" , "]");
+	    sj.add(id.toString()).add(firstName).add(lastName).add(accountNumber).add(name).add("employee="+employee.toString());
 	    return sj.toString();
     }
 }
