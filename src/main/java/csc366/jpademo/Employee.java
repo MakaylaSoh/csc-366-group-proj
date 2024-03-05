@@ -50,6 +50,7 @@ public class Employee {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bank_id")
     private Bank bank;
+
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "work_shift_id")
     private List<ScheduledWorkShift> shifts = new ArrayList<>();
@@ -57,14 +58,14 @@ public class Employee {
 
     public Employee() { }
     
-    public Employee(String firstName, String lastName, LocalDate birthday, String position, Store store, Bank bank, Employee manager) {
+    public Employee(String firstName, String lastName, LocalDate birthday, String position, Store store, Bank bank, List<ScheduledWorkShift> shifts) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
         this.position = position;
         this.store = store;
         this.bank = bank;
-        // this.manager = manager;
+        this.shifts = shifts;
     }
 
     public Long getId() {

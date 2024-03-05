@@ -34,10 +34,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     @Modifying
     @Query("update Employee e set e.birthday = :newBirthday where e.id = :employeeId")
-    Employee updateLastName(@Param("employeeId") Long employeeId, @Param("newBirthday") LocalDate newBirthday);
-
-    @Modifying
-    @Query("update Employee e set e.birthday = :newBirthday where e.id = :employeeId")
     Employee updateBirthday(@Param("employeeId") Long employeeId, @Param("newBirthday") LocalDate newBirthday);
 
     @Modifying
@@ -53,6 +49,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     Employee updatePosition(@Param("employeeId") Long employeeId, @Param("newPosition") String newPosition);
 
     // DELETE
+    @Modifying
     @Query("select e from Employee e where e.id = :employeeId")
-    long deleteByEmployeeId(@Param("employeeId") Long employeeId);
+    void deleteByEmployeeId(@Param("employeeId") Long employeeId);
 }
