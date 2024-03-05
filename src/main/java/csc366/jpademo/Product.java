@@ -24,7 +24,7 @@ public class Product {
     @JoinColumn(name = "supplier_id")
     private Supplier supplier_id;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order;
 

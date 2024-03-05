@@ -50,11 +50,9 @@ public class Employee {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "bank_id")
     private Bank bank;
-
-    // each employee may have multiple managers
     // @OneToMany(fetch = FetchType.LAZY)
-    // @JoinColumn(name = "id")
-    // private Employee manager;
+    // @JoinColumn(name = "work_shift_id")
+    // private <ScheduledWorkShift> shifts;
 
     public Employee() { }
     

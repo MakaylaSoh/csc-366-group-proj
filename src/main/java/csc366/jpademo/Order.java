@@ -29,6 +29,8 @@ public class Order {
     @JoinColumn(name = "customer_id", nullable = true)
     private Customer customer_id;
 
+    
+
     public Order(LocalDate receipt_date, Float total_cost, Integer rewards_earned) {
         this.receipt_date = receipt_date;
         this.total_cost = total_cost;
